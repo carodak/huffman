@@ -1,0 +1,144 @@
+\hypertarget{huffman_8c}{}\section{huffman.\+c File Reference}
+\label{huffman_8c}\index{huffman.\+c@{huffman.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\\*
+Include dependency graph for huffman.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \hyperlink{huffman_8c_ad223a7981355b81b081ba8b728b5fa26}{calcul\+Freq} (char $\ast$fichier)
+\item 
+int \hyperlink{huffman_8c_a66ad5c57e601005c551a4c9c65fe501b}{min} (\hyperlink{structnoeud}{Noeud} $\ast$B, int differentde)
+\item 
+void \hyperlink{huffman_8c_a5e8397e52b07294a0c19f3e2d02fdae8}{construct} (\hyperlink{structnoeud}{Noeud} $\ast$arbre, float $\ast$\hyperlink{huffman_8c_acf9754ea5f0557ca641ce902a397fc95}{freq})
+\item 
+\hypertarget{huffman_8c_a7174e55360a7dc9b7b595345c37c73fc}{}void {\bfseries affiche} (\hyperlink{structnoeud}{Noeud} $\ast$arbre)\label{huffman_8c_a7174e55360a7dc9b7b595345c37c73fc}
+
+\item 
+int \hyperlink{huffman_8c_a35b84556eb2e813fd6238af16d035a17}{get\+Racine} (\hyperlink{structnoeud}{Noeud} $\ast$arbre)
+\item 
+void \hyperlink{huffman_8c_a561ba5549a968a82052d8620b30cdc86}{parcours} (unsigned short int indice\+Noeud, char $\ast$code, \hyperlink{structnoeud}{Noeud} $\ast$arbre, unsigned short int indice\+Tab)
+\item 
+\hypertarget{huffman_8c_a207c86cbb101d3ab377fc0221e333314}{}int {\bfseries puissance} (int a, int b)\label{huffman_8c_a207c86cbb101d3ab377fc0221e333314}
+
+\item 
+void \hyperlink{huffman_8c_a3ec802c8a5aa7192c97ddba211c6a83d}{create\+Fichier\+Compresse} (char $\ast$fichier, \hyperlink{structnoeud}{Noeud} $\ast$arbre, char $\ast$dest)
+\item 
+int \hyperlink{huffman_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \hyperlink{huffman_8c_acf9754ea5f0557ca641ce902a397fc95}{freq}
+\item 
+\hypertarget{huffman_8c_a67587d498575d9dc46ecfa4cffe7ae72}{}int {\bfseries nbre\+\_\+car\+\_\+2}\label{huffman_8c_a67587d498575d9dc46ecfa4cffe7ae72}
+
+\item 
+unsigned int \hyperlink{huffman_8c_ac54d675bf046bb11e700f705242615da}{go}
+\item 
+\hypertarget{huffman_8c_afd316af0f0b499ba1ba3b6b8e93e27d2}{}float $\ast$ {\bfseries frequences}\label{huffman_8c_afd316af0f0b499ba1ba3b6b8e93e27d2}
+
+\item 
+\hypertarget{huffman_8c_a8163a75dd5224dc77430d8af36bd7592}{}char {\bfseries buffer} \mbox{[}5000\mbox{]}\label{huffman_8c_a8163a75dd5224dc77430d8af36bd7592}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+\+: Binome composé de Caroline Dakouré \& Lyes Meghara \+: Supervisé par Monsieur Pierre Pompidor 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 06/12/2015
+\end{DoxyDate}
+Programme de compression de fichiers en utilisant l\textquotesingle{}algorithme de Huffman. Projet de licence 2 Informatique de H\+L\+I\+N303 (Systèmes et réseaux) de la faculté des sciences de Montpellier 2. 
+
+\subsection{Function Documentation}
+\hypertarget{huffman_8c_ad223a7981355b81b081ba8b728b5fa26}{}\index{huffman.\+c@{huffman.\+c}!calcul\+Freq@{calcul\+Freq}}
+\index{calcul\+Freq@{calcul\+Freq}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{calcul\+Freq}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ calcul\+Freq (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fichier}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_ad223a7981355b81b081ba8b728b5fa26}
+On crée une fonction qui renvoie un tableau de fréquences fonction travaille par elle même (copie) \hypertarget{huffman_8c_a5e8397e52b07294a0c19f3e2d02fdae8}{}\index{huffman.\+c@{huffman.\+c}!construct@{construct}}
+\index{construct@{construct}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{construct}]{\setlength{\rightskip}{0pt plus 5cm}void construct (
+\begin{DoxyParamCaption}
+\item[{{\bf Noeud} $\ast$}]{arbre, }
+\item[{float $\ast$}]{freq}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_a5e8397e52b07294a0c19f3e2d02fdae8}
+Construction de l\textquotesingle{}arbre binaire \hypertarget{huffman_8c_a3ec802c8a5aa7192c97ddba211c6a83d}{}\index{huffman.\+c@{huffman.\+c}!create\+Fichier\+Compresse@{create\+Fichier\+Compresse}}
+\index{create\+Fichier\+Compresse@{create\+Fichier\+Compresse}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{create\+Fichier\+Compresse}]{\setlength{\rightskip}{0pt plus 5cm}void create\+Fichier\+Compresse (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fichier, }
+\item[{{\bf Noeud} $\ast$}]{arbre, }
+\item[{char $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_a3ec802c8a5aa7192c97ddba211c6a83d}
+E\+T\+A\+P\+E 1\+: On lit chaque caractère du fichier source (les aaabbbbccc...) et $\ast$on le stoque dans le buffer
+
+On rajoute l\textquotesingle{}entête
+
+E\+T\+A\+P\+E 2\+: si le nombre de caractères stockés dans le buffer $>$=8
+\begin{DoxyItemize}
+\item on calcule la valeur entière des 8 premiers caractères
+\end{DoxyItemize}
+
+on stocke dans le fichier compressé le caractère A\+S\+C\+I\+I correspondant à cet$\ast$te valeur ent
+\begin{DoxyItemize}
+\item on enlève les 8 premiers caractères du buffer et on continue
+\end{DoxyItemize}
+
+Calcul de la valeur entière du code binaire des 8 premiers caractères
+
+On peut afficher la valeur entière correspondant au code binaire des 8 pr$\ast$emiers caractères pour vérifier qu\textquotesingle{}elle est bien calculée
+
+On peut afficher la valeur de k qui est la l\textquotesingle{}indice du dernier élément d$\ast$u nouveau tableau et le nouveau buffer réduit de 8 éléments printf(\char`\"{}\%i\textbackslash{}n\char`\"{},k);\hypertarget{huffman_8c_a35b84556eb2e813fd6238af16d035a17}{}\index{huffman.\+c@{huffman.\+c}!get\+Racine@{get\+Racine}}
+\index{get\+Racine@{get\+Racine}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{get\+Racine}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Racine (
+\begin{DoxyParamCaption}
+\item[{{\bf Noeud} $\ast$}]{arbre}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_a35b84556eb2e813fd6238af16d035a17}
+On cherche la racine de l\textquotesingle{}arbre car elle a été précedemment trouvé dans une fonction pas dans le main \hypertarget{huffman_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{huffman.\+c@{huffman.\+c}!main@{main}}
+\index{main@{main}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+Afin de vérifier que la fréquence est bien calculée, on affiche i en ca$\ast$ractères (ex a), i en code ascii(97) et sa fréquence \hypertarget{huffman_8c_a66ad5c57e601005c551a4c9c65fe501b}{}\index{huffman.\+c@{huffman.\+c}!min@{min}}
+\index{min@{min}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}int min (
+\begin{DoxyParamCaption}
+\item[{{\bf Noeud} $\ast$}]{B, }
+\item[{int}]{differentde}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_a66ad5c57e601005c551a4c9c65fe501b}
+Cherche les 2 minimums de l\textquotesingle{}arbre \hypertarget{huffman_8c_a561ba5549a968a82052d8620b30cdc86}{}\index{huffman.\+c@{huffman.\+c}!parcours@{parcours}}
+\index{parcours@{parcours}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{parcours}]{\setlength{\rightskip}{0pt plus 5cm}void parcours (
+\begin{DoxyParamCaption}
+\item[{unsigned short int}]{indice\+Noeud, }
+\item[{char $\ast$}]{code, }
+\item[{{\bf Noeud} $\ast$}]{arbre, }
+\item[{unsigned short int}]{indice\+Tab}
+\end{DoxyParamCaption}
+)}\label{huffman_8c_a561ba5549a968a82052d8620b30cdc86}
+Code est le tableau qui va contenir le code binaire de chaque caractère 
+
+\subsection{Variable Documentation}
+\hypertarget{huffman_8c_acf9754ea5f0557ca641ce902a397fc95}{}\index{huffman.\+c@{huffman.\+c}!freq@{freq}}
+\index{freq@{freq}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{freq}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ freq}\label{huffman_8c_acf9754ea5f0557ca641ce902a397fc95}
+On déclare un tableau de floats globalement qui receuilli les fréquences \hypertarget{huffman_8c_ac54d675bf046bb11e700f705242615da}{}\index{huffman.\+c@{huffman.\+c}!go@{go}}
+\index{go@{go}!huffman.\+c@{huffman.\+c}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int go}\label{huffman_8c_ac54d675bf046bb11e700f705242615da}
+On le déclare en globale pour pouvoir afficher les stats à la fin 
